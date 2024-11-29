@@ -27,7 +27,6 @@ jobs:
     steps:
 
       # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
+      - name: Get Workflow Input Parameters
         run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+          echo "ID App: ${{ github.event.inputs.id_app }}, Port Context: ${{ github.event.inputs.port_context }}"
